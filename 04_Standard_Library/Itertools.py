@@ -23,3 +23,36 @@ iter = itertools.repeat("as", 9)
 for idx, i in enumerate(iter):
     print(i)
     if idx > 100: break
+
+
+# ========================
+# ========================
+# Combination....iterator...
+# ========================
+# ========================
+
+#(ABCD, ABCD)
+iter = itertools.product("ABCD", repeat=2)
+for idx, i in enumerate(iter):
+    print(i)
+    if idx > 100: break
+print("")
+
+# (A, BCD), (B, ACD), (C, ABD), (D, ABC)
+iter = itertools.permutations("ABCD", 2)
+for idx, i in enumerate(iter):
+    print(i)
+    if idx > 100: break
+print("")
+
+
+iter = itertools.combinations("ABCD", 2)
+for idx, i in enumerate(iter):
+    print(i)
+    if idx > 100: break
+print("")
+
+iter = itertools.combinations_with_replacement("ABCD", 2)
+for idx, i in enumerate(iter):
+    print(i)
+    if idx > 100: break
