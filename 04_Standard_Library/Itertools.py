@@ -24,6 +24,33 @@ for idx, i in enumerate(iter):
     print(i)
     if idx > 100: break
 
+# ========================
+# ========================
+# Variable iterator…
+# ========================
+# ========================
+
+# 계속 더함
+iter = itertools.accumulate([1,2,3,4,5])
+for idx, i in enumerate(iter):
+    print(i, end=' ')
+    if idx > 100: break
+print("")
+
+# 두 iterable을 합침
+iter = itertools.chain([1,2,3,4,5], [2,3,1,5])
+for idx, i in enumerate(iter):
+    print(i, end=' ')
+    if idx > 100: break
+print("")
+
+# boolean mask를 이용.
+iter = itertools.compress([1,2,3,4,5,6,7,8,9], [0,1,1,1,1,1,0,0,1])
+for idx, i in enumerate(iter):
+    print(i, end=' ')
+    if idx > 100: break
+print("")
+
 
 # ========================
 # ========================
